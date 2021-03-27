@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+<RelativeLayout
+  android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddLocation">
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Location"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:layout_below="@id/etNama"/>
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:gravity="end"
+            android:layout_height="35dp"
+            android:drawableRight="@drawable/ic_baseline_close_24"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textSatu"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/liner"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:text="Status"/>
+    <RadioGroup
+        android:id="@+id/radioGrup"
+        android:layout_below="@id/textSatu"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbLeft"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="@android:color/white"
+            android:text="Active"
+            android:checked="true"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:background="@drawable/rb_left_selector"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbRight"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:textColor="@android:color/holo_blue_dark"
+            android:text="InActive"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:background="@drawable/rb_right_selector"/>
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textDua"
+        android:layout_below="@id/radioGrup"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="Name"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etNama"
+        android:hint="Tuliskan nama"
+        android:layout_margin="3dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/bg_editext_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDua"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Address"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_below="@id/etNama"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textEmpat"
+        android:layout_below="@id/textTiga"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="Map"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textAddress"
+        android:layout_below="@id/map"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="Address"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etAddress"
+        android:hint="Tuliskan Alamat"
+        android:layout_margin="3dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/bg_editext_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textAddress"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textCity"
+        android:layout_below="@id/etAddress"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="City"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCity"
+        android:hint="Tuliskan kota"
+        android:layout_margin="3dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/bg_editext_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textCity"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/textZip"
+        android:layout_below="@id/etCity"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="Zip Code"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etZip"
+        android:inputType="number"
+        android:hint="Tuliskan zip"
+        android:layout_margin="3dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/bg_editext_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textZip"/>
+    <LinearLayout
+        android:gravity="center_horizontal|bottom"
+        android:layout_below="@id/etZip"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_margin="1dp"
+
+            android:background="@drawable/btn_cancel"
+            android:textColor="@color/black"
+        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAccept"
+            android:layout_margin="1dp"
+            android:background="@drawable/btn_terima"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+<fragment
+    android:layout_marginTop="10dp"
+        android:id="@+id/map"
+        android:layout_below="@id/textEmpat"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
+</RelativeLayout>
+
+</ScrollView>

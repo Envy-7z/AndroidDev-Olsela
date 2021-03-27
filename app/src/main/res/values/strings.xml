@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TesAndroidDev-Orsela</string>
+    <string name="form_empty">Some data is empty, checked your form</string>
+    <string name="success_update">"Success update "</string>
+    <string name="success_save">"Success save "</string>
+    <string name="success_delete">Success delete</string>
+    <string name="update">Update</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

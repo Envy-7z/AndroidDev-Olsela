@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_height="wrap_content">
+       <androidx.appcompat.widget.AppCompatImageView
+           android:layout_margin="10dp"
+           android:layout_width="65dp"
+           android:id="@+id/imageView"
+           android:src="@drawable/dummy"
+           android:background="@drawable/rounded"
+           android:layout_height="65dp"
+           />
+
+       <LinearLayout
+           android:layout_marginTop="25dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/tvNama"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Wisnu - Yogyakarta"
+               android:textColor="@color/black"
+               android:textSize="12sp"
+               android:textStyle="bold"/>
+           <TextView
+               android:id="@+id/textDua"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Wisnu - Yogyakarta"
+               android:textColor="@color/black"
+               android:textSize="12sp"/>
+       </LinearLayout>
+
+       <TextView
+           android:gravity="end"
+           android:id="@+id/tvActive"
+           android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+           android:layout_marginTop="30dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Inactive"/>
+        </LinearLayout>
+</androidx.cardview.widget.CardView>
